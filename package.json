@@ -15,8 +15,20 @@
     "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/netinfo": "^5.8.0",
     "@react-native-firebase/app": "6.7.1",
+    "moment": "^2.24.0",
     "react": "^16.13.1",
-    "react-native": "^0.62.2"
+    "react-moment": "^0.9.7",
+    "react-native": "^0.62.2",
+    "react-native-datepicker-dialog": "^0.0.9",
+    "react-native-dialog-input": "^1.0.7",
+    "react-native-easy-toast": "^1.2.0",
+    "react-native-elements": "^1.2.7",
+    "react-native-image-crop-picker": "^0.28.0",
+    "react-native-ios-status-bar-padding": "^1.2.0",
+    "react-native-keyboard-aware-scrollview": "^2.1.0",
+    "react-native-uuid-generator": "^6.1.1",
+    "react-native-vector-icons": "^6.6.0",
+    "react-native-view-pdf": "^0.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
