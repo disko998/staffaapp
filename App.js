@@ -3,6 +3,10 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import firebase from '@react-native-firebase/app';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import firestore from '@react-native-firebase/firestore';
+import auth from '@react-native-firebase/auth';
+import messaging from '@react-native-firebase/messaging';
+import storage from '@react-native-firebase/storage';
 
 // TODO(you): import any additional firebase services that you require for your app, e.g for auth:
 //    1) install the npm package: `yarn add @react-native-firebase/auth@alpha` - you do not need to
