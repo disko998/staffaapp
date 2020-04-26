@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "run:android": "react-native run-android",
+    "run:android": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
     "run:ios": "react-native run-ios --simulator=\"iPhone X\"",
     "build:apk": "cd android && ./gradlew assembleRelease",
     "test": "jest",
@@ -17,6 +17,7 @@
     "@react-native-community/netinfo": "^5.8.0",
     "@react-native-firebase/app": "6.7.1",
     "@react-navigation/native": "^5.1.6",
+    "@react-navigation/stack": "^5.2.13",
     "moment": "^2.24.0",
     "react": "^16.13.1",
     "react-moment": "^0.9.7",

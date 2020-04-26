@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import firebase from '@react-native-firebase/app';
 import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 // TODO(you): import any additional firebase services that you require for your app, e.g for auth:
 //    1) install the npm package: `yarn add @react-native-firebase/auth@alpha` - you do not need to
@@ -21,26 +22,35 @@ const firebaseCredentials = Platform.select({
   android: 'https://invertase.link/firebase-android',
 });
 
+const RootStack = createStackNavigator();
+
 export default class App extends Component {
   render() {
     return (
       <NavigationContainer>
-        <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native + Firebase!
-          </Text>
-          <Text style={styles.instructions}>To get started, edit App.js</Text>
-          <Text style={styles.instructions}>{instructions}</Text>
-          {!firebase.apps.length && (
-            <Text style={styles.instructions}>
-              {`\nYou currently have no Firebase apps registered, this most likely means you've not downloaded your project credentials. Visit the link below to learn more. \n\n ${firebaseCredentials}`}
-            </Text>
-          )}
-        </View>
+        <RootStack.Navigator
+          initialRouteName="Home"
+          headerMode="none"
+          screenOptions={{headerShown: false}}>
+          <RootStack.Screen name="Home" component={Screen} />
+        </RootStack.Navigator>
       </NavigationContainer>
     );
   }
 }
+
+const Screen = () => (
+  <View style={styles.container}>
+    <Text style={styles.welcome}>Nav to React Native + Firebase!</Text>
+    <Text style={styles.instructions}>To get started, edit App.js</Text>
+    <Text style={styles.instructions}>{instructions}</Text>
+    {!firebase.apps.length && (
+      <Text style={styles.instructions}>
+        {`\nYou currently have no Firebase apps registered, this most likely means you've not downloaded your project credentials. Visit the link below to learn more. \n\n ${firebaseCredentials}`}
+      </Text>
+    )}
+  </View>
+);
 
 const styles = StyleSheet.create({
   container: {
