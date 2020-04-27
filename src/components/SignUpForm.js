@@ -134,7 +134,6 @@ export default function SignUpForm({navigationContext}) {
       <TextBox
         style={{color: context.utilities.colors.main}}
         label="Password"
-        label="Password"
         placeholder="Password"
         onChangeText={text => {
           setCredentials({...credentials, password: text});

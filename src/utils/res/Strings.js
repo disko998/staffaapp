@@ -85,9 +85,9 @@ const Strings = {
   APP_SCREEN_REFERENCES_LIST: 'ReferencesListScreen',
   APP_SCREEN_ADD_REFERENCE: 'AddReferenceScreen',
 
-  APP_SCREEN_PROFILE: 'ProfileScreen',
-  APP_SCREEN_MESSAGES: 'MessagesScreen',
-  APP_SCREEN_NOTIFICATIONS: 'NotificationsScreen',
+  APP_SCREEN_PROFILE: 'Profile',
+  APP_SCREEN_MESSAGES: 'Messages',
+  APP_SCREEN_NOTIFICATIONS: 'Notifications',
   APP_SCREEN_CHAT: 'ChatScreen',
   APP_SCREEN_SETTINGS: 'SettingsScreen',
   APP_BID_SCREEN: 'BidScreen',
@@ -95,6 +95,7 @@ const Strings = {
   APP_SCREEN_MY_CONTRACTS: 'MyContractsScreen',
   APP_SCREEN_MY_PAYMENTS: 'MyPaymentsScreen',
   APP_SCREEN_PAYMENT: 'PaymentScreen',
+  APP_SCREEN_SEARCH_JOBS: 'Search Jobs',
 
   registerNotificationMsg:
     'We need to notify you of compliance related matters, payments and offers relating to your vocation and aspirations. \n\n You can change this settings at any time in your device settings.',

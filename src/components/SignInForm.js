@@ -14,13 +14,14 @@ export default function SignInForm({navigationContext}) {
     password: '',
     rememberMe: false,
   });
+  const apiService = new ApiService();
+
   const {
     ForgotPasswordLinkText,
     ForgotPasswordText,
     formTitle,
   } = context.utilities.styles;
   const {black} = context.utilities.colors;
-  const apiService = new ApiService();
 
   const isInputValid = () => {
     if (credentials.username === '') {
@@ -105,7 +106,6 @@ export default function SignInForm({navigationContext}) {
         value={credentials.username}
       />
       <TextBox
-        label="Password"
         label="Password"
         placeholder="Password"
         onChangeText={text => {

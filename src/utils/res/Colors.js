@@ -25,6 +25,7 @@ const Colors = {
   red: '#FF0000',
   yellow: '#FFC300',
   green: '#3CB371',
+  inactive: '#8caec2',
 
   dividerColor: '#c7c6c6',
   placeHolderColor: '#c7c6c6',
