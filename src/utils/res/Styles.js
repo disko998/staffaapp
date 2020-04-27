@@ -622,4 +622,14 @@ module.exports = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'flex-end',
   },
+  profileBanner: {
+    backgroundColor: Colors.secondary,
+    width: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 15,
+  },
+  profileBannerName: {color: Colors.white, fontWeight: 'bold', fontSize: 20},
+  profileBannerTitle: {color: Colors.white, fontSize: 18},
 });

@@ -15,6 +15,7 @@ import Colors from './utils/res/Colors';
 import SignUpScreen from './screens/auth/signup/SignUpScreen';
 import LoginScreen from './screens/auth/signin/LoginScreen';
 import ForgotPasswordScreen from './screens/auth/signin/ForgotPasswordScreen';
+import ProfileScreen from './screens/profile/Profile';
 
 function developmentScreen({route, navigation}) {
   return (
@@ -34,6 +35,7 @@ const Tab = createBottomTabNavigator();
 function TabNavigation() {
   return (
     <Tab.Navigator
+      initialRouteName={'Profile'}
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
@@ -62,10 +64,7 @@ function TabNavigation() {
         name={Strings.APP_SCREEN_SEARCH_JOBS}
         component={developmentScreen}
       />
-      <Tab.Screen
-        name={Strings.APP_SCREEN_PROFILE}
-        component={developmentScreen}
-      />
+      <Tab.Screen name={Strings.APP_SCREEN_PROFILE} component={ProfileScreen} />
       <Tab.Screen
         name={Strings.APP_SCREEN_MESSAGES}
         component={developmentScreen}

@@ -8,6 +8,7 @@ const Colors = {
   appColor: 'black',
   main: '#2b4059',
   link: '#9c8aed',
+  secondary: '#e31262',
   // 32BD2E
 
   black: '#000000',
