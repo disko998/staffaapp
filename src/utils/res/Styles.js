@@ -42,6 +42,9 @@ module.exports = StyleSheet.create({
 
   row: {
     flexDirection: 'row',
+  },
+
+  center: {
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -49,6 +52,25 @@ module.exports = StyleSheet.create({
   ratingText: {
     color: Colors.white,
     marginLeft: 10,
+  },
+
+  label: {
+    color: Colors.inactive,
+    fontSize: 18,
+    marginRight: 15,
+  },
+  darkText: {
+    fontSize: 18,
+    color: Colors.black,
+  },
+  itemText: {
+    fontSize: 18,
+    color: Colors.main,
+    flex: 1,
+  },
+
+  vm: {
+    marginVertical: marginBetweenElements,
   },
 
   /*

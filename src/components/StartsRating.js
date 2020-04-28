@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {View, Text} from 'react-native';
 import {Rating} from 'react-native-elements';
 
@@ -6,10 +6,10 @@ import {AppContext} from '../context/AppProvider';
 
 export default function StarsRating({...props}) {
   const context = useContext(AppContext);
-  const {row, ratingText} = context.utilities.styles;
+  const {row, center, ratingText} = context.utilities.styles;
 
   return (
-    <View style={[row, {marginTop: 5}]}>
+    <View style={[row, center, {marginTop: 5}]}>
       <Rating
         type="custom"
         readonly
