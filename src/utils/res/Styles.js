@@ -73,6 +73,13 @@ module.exports = StyleSheet.create({
     marginVertical: marginBetweenElements,
   },
 
+  settingsLink: {
+    color: Colors.inactive,
+    fontSize: 18,
+    flex: 1,
+    marginLeft: 10,
+  },
+
   /*
    OLD styles UI Components
   */

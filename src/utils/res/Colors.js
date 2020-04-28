@@ -9,7 +9,7 @@ const Colors = {
   main: '#2b4059',
   link: '#9c8aed',
   secondary: '#e31262',
-  // 32BD2E
+  inactive: '#6facd1',
 
   black: '#000000',
   white: '#ffffff',
@@ -26,7 +26,6 @@ const Colors = {
   red: '#FF0000',
   yellow: '#FFC300',
   green: '#3CB371',
-  inactive: '#8caec2',
 
   dividerColor: '#c7c6c6',
   placeHolderColor: '#c7c6c6',

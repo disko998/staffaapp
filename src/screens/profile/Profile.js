@@ -1,9 +1,33 @@
 import React from 'react';
 import {ScrollView, StatusBar} from 'react-native';
+import Feather from 'react-native-vector-icons/Feather';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-import ProfileBanner from '../../components/ProfileBanner';
 import Colors from '../../utils/res/Colors';
+import ProfileBanner from '../../components/ProfileBanner';
 import ProfileOverview from '../../components/ProfileOverview';
+import SettingsList from '../../components/SettingsList';
+
+const profileSettings = [
+  {
+    label: 'Training',
+    icon: <Feather name="briefcase" color={Colors.inactive} size={20} />,
+  },
+  {
+    label: 'Settings',
+    icon: <Feather name="settings" color={Colors.inactive} size={20} />,
+  },
+  {
+    label: 'Finance',
+    icon: (
+      <MaterialIcons name="attach-money" color={Colors.inactive} size={20} />
+    ),
+  },
+  {
+    label: 'Offers',
+    icon: <Feather name="gift" color={Colors.inactive} size={20} />,
+  },
+];
 
 export default function ProfileScreen() {
   return (
@@ -22,6 +46,7 @@ export default function ProfileScreen() {
         onStatusChange={value => console.log(value)}
         onLocationChange={value => console.log(value)}
       />
+      <SettingsList settings={profileSettings} />
     </ScrollView>
   );
 }

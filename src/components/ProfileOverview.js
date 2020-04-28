@@ -16,7 +16,7 @@ export default function ProfileOverview({
   const {row, center, label, itemText, vm} = context.utilities.styles;
 
   return (
-    <Card containerStyle={{marginBottom: 20}}>
+    <Card containerStyle={{marginBottom: 10}}>
       <View style={[row, center]}>
         <Text style={label}>Staff number : </Text>
         <Text style={itemText}>{staffNumber}</Text>
