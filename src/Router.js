@@ -17,7 +17,7 @@ import LoginScreen from './screens/auth/signin/LoginScreen';
 import ForgotPasswordScreen from './screens/auth/signin/ForgotPasswordScreen';
 import ProfileScreen from './screens/profile/Profile';
 
-function developmentScreen({route, navigation}) {
+function inDevelopmentScreen({route, navigation}) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text style={{marginBottom: 15, color: '#000', fontSize: 20}}>
@@ -62,16 +62,16 @@ function TabNavigation() {
       }}>
       <Tab.Screen
         name={Strings.APP_SCREEN_SEARCH_JOBS}
-        component={developmentScreen}
+        component={inDevelopmentScreen}
       />
       <Tab.Screen name={Strings.APP_SCREEN_PROFILE} component={ProfileScreen} />
       <Tab.Screen
         name={Strings.APP_SCREEN_MESSAGES}
-        component={developmentScreen}
+        component={inDevelopmentScreen}
       />
       <Tab.Screen
         name={Strings.APP_SCREEN_NOTIFICATIONS}
-        component={developmentScreen}
+        component={inDevelopmentScreen}
       />
     </Tab.Navigator>
   );

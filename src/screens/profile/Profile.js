@@ -34,7 +34,6 @@ export default function ProfileScreen() {
 
   return (
     <ScrollView>
-      <StatusBar backgroundColor={Colors.secondary} />
       <ProfileBanner
         name="Julie Smith"
         title="Nurse at RGN Dip LL."
