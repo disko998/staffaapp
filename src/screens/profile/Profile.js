@@ -30,6 +30,8 @@ const profileSettings = [
 ];
 
 export default function ProfileScreen() {
+  const [status, setStatus] = React.useState(true);
+
   return (
     <ScrollView>
       <StatusBar backgroundColor={Colors.secondary} />
@@ -41,9 +43,9 @@ export default function ProfileScreen() {
       />
       <ProfileOverview
         staffNumber="HCP-445781/7787"
-        status={true}
+        status={status}
         location="London"
-        onStatusChange={value => console.log(value)}
+        onStatusChange={value => setStatus(value)}
         onLocationChange={value => console.log(value)}
       />
       <SettingsList settings={profileSettings} />
