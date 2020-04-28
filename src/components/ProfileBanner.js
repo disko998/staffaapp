@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
-import {Rating, AirbnbRating} from 'react-native-elements';
 import Feather from 'react-native-vector-icons/Feather';
 
 import Avatar from './Avatar';
+import StartsRating from './StartsRating';
 import {AppContext} from '../context/AppProvider';
 
-export default function ProfileBanner() {
+export default function ProfileBanner({name, title, rating, avatar}) {
   const context = useContext(AppContext);
   const {
     profileBanner,
@@ -18,14 +18,16 @@ export default function ProfileBanner() {
 
   return (
     <View style={profileBanner}>
-      <Avatar
-        src="https://randomuser.me/api/portraits/women/68.jpg"
-        size={120}
-      />
-      <Text style={profileBannerName}>Julie Smith</Text>
-      <Text style={profileBannerTitle}>Nurse at RGN Dip LL.</Text>
+      <Avatar src={avatar} size={120} />
+      <Text style={profileBannerName}>{name}</Text>
+      <Text style={profileBannerTitle}>{title}</Text>
+      <StartsRating startingValue={rating} />
       <TouchableOpacity style={editProfileButton}>
-        <Feather name="edit-3" size={25} color={'#fff'} />
+        <Feather
+          name="edit-3"
+          size={25}
+          color={context.utilities.colors.white}
+        />
         <Text style={editButtonText}>Edit</Text>
       </TouchableOpacity>
     </View>

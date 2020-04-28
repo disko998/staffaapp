@@ -1,14 +1,19 @@
 import React from 'react';
-import {View, Text, StatusBar} from 'react-native';
+import {ScrollView, View, StatusBar} from 'react-native';
 
 import ProfileBanner from '../../components/ProfileBanner';
 import Colors from '../../utils/res/Colors';
 
 export default function ProfileScreen() {
   return (
-    <View>
+    <ScrollView>
       <StatusBar backgroundColor={Colors.secondary} />
-      <ProfileBanner />
-    </View>
+      <ProfileBanner
+        name="Julie Smith"
+        title="Nurse at RGN Dip LL."
+        rating={4.5}
+        avatar="https://randomuser.me/api/portraits/women/68.jpg"
+      />
+    </ScrollView>
   );
 }

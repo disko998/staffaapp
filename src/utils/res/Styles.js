@@ -31,14 +31,25 @@ module.exports = StyleSheet.create({
     top: 20,
     right: 20,
   },
-  editButtonText: {color: '#fff', marginLeft: 5},
+  editButtonText: {color: Colors.white, marginLeft: 5},
 
   avatar: {
     borderRadius: 100,
     borderWidth: 2,
-    borderColor: '#fff',
+    borderColor: Colors.white,
   },
   avatarWrapper: {padding: 2, borderRadius: 50},
+
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  ratingText: {
+    color: Colors.white,
+    marginLeft: 10,
+  },
 
   /*
    OLD styles UI Components
