@@ -1,17 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Image} from 'react-native';
 
+import {AppContext} from '../context/AppProvider';
+
 export default function Avatar({src, size}) {
+  const context = useContext(AppContext);
+  const {avatar, avatarWrapper} = context.utilities.styles;
   return (
-    <View style={{padding: 2, borderRadius: 50}}>
+    <View style={avatarWrapper}>
       <Image
-        style={{
-          height: size,
-          width: size,
-          borderRadius: 100,
-          borderWidth: 2,
-          borderColor: '#fff',
-        }}
+        style={[avatar, {width: size, height: size}]}
         source={{uri: src}}
       />
     </View>

@@ -1,6 +1,3 @@
-/*
-  Defines styles for each UI Component
-*/
 'use strict';
 import {StyleSheet, Dimensions} from 'react-native';
 import Colors from './Colors';
@@ -11,6 +8,41 @@ var windowWidth = Dimensions.get('window').width;
 const marginBetweenElements = 13;
 
 module.exports = StyleSheet.create({
+  /*
+  New styles for each UI Component
+  */
+
+  profileBanner: {
+    backgroundColor: Colors.secondary,
+    width: '100%',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  profileBannerName: {color: Colors.white, fontWeight: 'bold', fontSize: 20},
+  profileBannerTitle: {color: Colors.white, fontSize: 18},
+
+  editProfileButton: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    position: 'absolute',
+    top: 20,
+    right: 20,
+  },
+  editButtonText: {color: '#fff', marginLeft: 5},
+
+  avatar: {
+    borderRadius: 100,
+    borderWidth: 2,
+    borderColor: '#fff',
+  },
+  avatarWrapper: {padding: 2, borderRadius: 50},
+
+  /*
+   OLD styles UI Components
+  */
   root: {
     flex: 1,
     backgroundColor: Colors.appBGColor,
@@ -622,14 +654,4 @@ module.exports = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'flex-end',
   },
-  profileBanner: {
-    backgroundColor: Colors.secondary,
-    width: '100%',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 15,
-  },
-  profileBannerName: {color: Colors.white, fontWeight: 'bold', fontSize: 20},
-  profileBannerTitle: {color: Colors.white, fontSize: 18},
 });

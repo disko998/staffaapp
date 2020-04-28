@@ -12,6 +12,8 @@ export default function ProfileBanner() {
     profileBanner,
     profileBannerName,
     profileBannerTitle,
+    editProfileButton,
+    editButtonText,
   } = context.utilities.styles;
 
   return (
@@ -22,14 +24,9 @@ export default function ProfileBanner() {
       />
       <Text style={profileBannerName}>Julie Smith</Text>
       <Text style={profileBannerTitle}>Nurse at RGN Dip LL.</Text>
-      <TouchableOpacity
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+      <TouchableOpacity style={editProfileButton}>
         <Feather name="edit-3" size={25} color={'#fff'} />
-        <Text style={{color: '#fff', marginLeft: 5}}>Edit</Text>
+        <Text style={editButtonText}>Edit</Text>
       </TouchableOpacity>
     </View>
   );
