@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, Fragment} from 'react';
 import {Text, TouchableOpacity} from 'react-native';
 import {Card, Divider, Icon} from 'react-native-elements';
 
@@ -11,7 +11,7 @@ export default function SettingsList({settings}) {
   return (
     <Card containerStyle={{marginBottom: 20}}>
       {settings.map((setting, index) => (
-        <>
+        <Fragment key={setting.label + index}>
           <TouchableOpacity style={[row, center]} onPress={setting.onPress}>
             {setting.icon && setting.icon}
             <Text style={settingsLink}>{setting.label}</Text>
@@ -21,7 +21,7 @@ export default function SettingsList({settings}) {
             />
           </TouchableOpacity>
           {settings.length - 1 !== index && <Divider style={vm} />}
-        </>
+        </Fragment>
       ))}
     </Card>
   );

@@ -11,6 +11,54 @@ module.exports = StyleSheet.create({
   /*
   New styles for each UI Component
   */
+  messageWrapper: {
+    width: '100%',
+    padding: 15,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    maxHeight: 100,
+    overflow: 'hidden',
+  },
+  messageContentWrapper: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
+  messageTitle: {
+    fontSize: 18,
+    color: Colors.main,
+    alignSelf: 'flex-start',
+    fontWeight: 'bold',
+  },
+  messageContent: {
+    color: Colors.inactive,
+  },
+  messageDate: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    color: Colors.inactive,
+  },
+
+  notificationLink: {
+    color: Colors.inactive,
+    textDecorationLine: 'underline',
+    marginLeft: 10,
+    fontSize: 18,
+  },
+  notificationTitle: {
+    fontSize: 18,
+    color: Colors.main,
+    textAlign: 'left',
+    alignSelf: 'flex-start',
+    flex: 1,
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    height: 30,
+  },
 
   profileBanner: {
     backgroundColor: Colors.secondary,
@@ -33,12 +81,34 @@ module.exports = StyleSheet.create({
   },
   editButtonText: {color: Colors.white, marginLeft: 5},
 
-  avatar: {
+  avatarStyle: {
     borderRadius: 100,
     borderWidth: 2,
     borderColor: Colors.white,
   },
+  avatarMessageStyle: {
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: Colors.white,
+    width: 55,
+    height: 55,
+    marginRight: 15,
+  },
   avatarWrapper: {padding: 2, borderRadius: 50},
+
+  headerStyle: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 15,
+    backgroundColor: Colors.main,
+  },
+  headerTitle: {
+    textAlign: 'center',
+    color: Colors.white,
+    fontSize: 25,
+    flex: 1,
+  },
 
   row: {
     flexDirection: 'row',
