@@ -150,6 +150,63 @@ module.exports = StyleSheet.create({
     marginLeft: 10,
   },
 
+  searchJobsInputWrapper: {
+    backgroundColor: Colors.transparentMain(0.7),
+    padding: 5,
+    paddingHorizontal: 20,
+    position: 'absolute',
+    top: 20,
+    right: 20,
+    left: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+    elevation: 5,
+  },
+  searchJobsInputStyle: {
+    backgroundColor: 'transparent',
+    flex: 1,
+    color: Colors.white,
+    marginLeft: 15,
+  },
+
+  applyJobCardStyle: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+    right: 20,
+    borderRadius: 10,
+    backgroundColor: Colors.transparentMain(0.6),
+    elevation: 5,
+    overflow: 'hidden',
+  },
+  infoContainer: {
+    padding: 15,
+    flex: 1,
+    backgroundColor: Colors.transparentMain(0.6),
+  },
+
+  whiteTitleText: {
+    fontSize: 18,
+    color: Colors.white,
+    fontWeight: 'bold',
+  },
+  whiteText: {
+    fontSize: 16,
+    color: Colors.white,
+    marginVertical: 3,
+  },
+
+  mainButton: {
+    backgroundColor: Colors.main,
+    color: Colors.white,
+    fontWeight: 'bold',
+    height: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   /*
    OLD styles UI Components
   */

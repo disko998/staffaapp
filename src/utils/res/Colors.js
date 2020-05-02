@@ -32,5 +32,6 @@ const Colors = {
   //Keyboard
   keyBoardDividerColor: 'rgba(187,252,217,0.5)',
   keyBoardDisableTextColor: 'rgba(187,252,217,0.7)',
+  transparentMain: opacity => `rgba(43, 64, 89, ${opacity})`,
 };
 export default Colors;

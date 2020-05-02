@@ -18,6 +18,7 @@ import ForgotPasswordScreen from './screens/auth/signin/ForgotPasswordScreen';
 import ProfileScreen from './screens/profile/ProfileScreen';
 import MessagesScreen from './screens/messages/MessagesScreen';
 import NotificationScreen from './screens/notification/NotificationScreen';
+import SearchJobScreen from './screens/searchJob/SearchJobScreen';
 
 function inDevelopmentScreen({route, navigation}) {
   return (
@@ -37,7 +38,7 @@ const Tab = createBottomTabNavigator();
 function TabNavigation() {
   return (
     <Tab.Navigator
-      initialRouteName={'Notifications'}
+      initialRouteName={Strings.APP_SCREEN_SEARCH_JOBS}
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
           let iconName;
@@ -64,7 +65,7 @@ function TabNavigation() {
       }}>
       <Tab.Screen
         name={Strings.APP_SCREEN_SEARCH_JOBS}
-        component={inDevelopmentScreen}
+        component={SearchJobScreen}
       />
       <Tab.Screen name={Strings.APP_SCREEN_PROFILE} component={ProfileScreen} />
       <Tab.Screen
