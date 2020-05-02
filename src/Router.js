@@ -19,6 +19,7 @@ import ProfileScreen from './screens/profile/ProfileScreen';
 import MessagesScreen from './screens/messages/MessagesScreen';
 import NotificationScreen from './screens/notification/NotificationScreen';
 import SearchJobScreen from './screens/searchJob/SearchJobScreen';
+import DrawerProfile from './screens/profile/DrawerProfile';
 
 function inDevelopmentScreen({route, navigation}) {
   return (
@@ -82,8 +83,15 @@ function TabNavigation() {
 
 const DrawerNavigation = () => {
   return (
-    <Drawer.Navigator initialRouteName="Home">
+    <Drawer.Navigator initialRouteName="home" drawerContent={DrawerProfile}>
       <Drawer.Screen name={'home'} component={TabNavigation} />
+      <Drawer.Screen name={'shift'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'bids'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'contracts'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'payments'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'logout'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'help'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'feedback'} component={inDevelopmentScreen} />
     </Drawer.Navigator>
   );
 };

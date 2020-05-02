@@ -21,15 +21,17 @@ export default function ProfileBanner({name, title, rating, avatar}) {
       <Avatar src={avatar} size={120} />
       <Text style={profileBannerName}>{name}</Text>
       <Text style={profileBannerTitle}>{title}</Text>
-      <StartsRating startingValue={rating} />
-      <TouchableOpacity style={editProfileButton}>
-        <Feather
-          name="edit-3"
-          size={25}
-          color={context.utilities.colors.white}
-        />
-        <Text style={editButtonText}>Edit</Text>
-      </TouchableOpacity>
+      {rating && <StartsRating startingValue={rating} />}
+      {rating && (
+        <TouchableOpacity style={editProfileButton}>
+          <Feather
+            name="edit-3"
+            size={25}
+            color={context.utilities.colors.white}
+          />
+          <Text style={editButtonText}>Edit</Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 }

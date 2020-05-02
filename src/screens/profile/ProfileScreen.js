@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StatusBar} from 'react-native';
+import {ScrollView} from 'react-native';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
