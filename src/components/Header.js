@@ -7,13 +7,13 @@ import {AppContext} from '../context/AppProvider';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Colors from '../utils/res/Colors';
 
-export default function Header({title, back = false}) {
+export default function Header({title, onBack = false}) {
   const context = useContext(AppContext);
   const {headerStyle, headerTitle} = context.utilities.styles;
   return (
     <View style={headerStyle}>
-      {back && (
-        <TouchableOpacity>
+      {onBack && (
+        <TouchableOpacity onPress={onBack}>
           <Ionicons name="ios-arrow-back" size={30} color={Colors.white} />
         </TouchableOpacity>
       )}

@@ -4,7 +4,7 @@ import Header from '../../utils/header';
 import {AppConsumer} from '../../context/AppProvider';
 import MultiSelect from 'react-native-multiple-select';
 import firebase from 'react-native-firebase';
-import Strings from '.././../utils/res/Strings';
+import Strings from '../../utils/res/Strings';
 import StatusBarPaddingIOS from 'react-native-ios-status-bar-padding';
 
 export default class BidScreen extends Component {
@@ -45,7 +45,9 @@ export default class BidScreen extends Component {
         price: this.state.bidPrice,
         jobId: item.id,
         name: item.name,
-        freelancerName: `${this.context.userData.registerData.firstName} ${this.context.userData.registerData.lastName}`,
+        freelancerName: `${this.context.userData.registerData.firstName} ${
+          this.context.userData.registerData.lastName
+        }`,
       };
       bidUids.push(this.context.currentUser.uid);
       const jobData = {

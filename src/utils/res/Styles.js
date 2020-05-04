@@ -11,6 +11,24 @@ module.exports = StyleSheet.create({
   /*
   New styles for each UI Component
   */
+  darkTitle: {
+    fontSize: 20,
+    color: Colors.black,
+    fontWeight: 'bold',
+  },
+  grayText: {
+    fontSize: 17,
+  },
+  mainText: {
+    fontSize: 18,
+    color: Colors.main,
+  },
+  rowSpace: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginVertical: 5,
+  },
   messageWrapper: {
     width: '100%',
     padding: 15,

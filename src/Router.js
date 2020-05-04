@@ -20,6 +20,9 @@ import MessagesScreen from './screens/messages/MessagesScreen';
 import NotificationScreen from './screens/notification/NotificationScreen';
 import SearchJobScreen from './screens/searchJob/SearchJobScreen';
 import DrawerProfile from './screens/profile/DrawerProfile';
+import MyBidsScreen from './screens/dashboard/drawer/MyBidsScreen';
+import MyContractsScreen from './screens/dashboard/drawer/MyContractsScreen ';
+import MyPaymentsScreen from './screens/dashboard/drawer/MyPaymentsScreen';
 
 function inDevelopmentScreen({route, navigation}) {
   return (
@@ -83,12 +86,14 @@ function TabNavigation() {
 
 const DrawerNavigation = () => {
   return (
-    <Drawer.Navigator initialRouteName="home" drawerContent={DrawerProfile}>
-      <Drawer.Screen name={'home'} component={TabNavigation} />
+    <Drawer.Navigator
+      initialRouteName="dashboard"
+      drawerContent={DrawerProfile}>
+      <Drawer.Screen name={'dashboard'} component={TabNavigation} />
       <Drawer.Screen name={'shift'} component={inDevelopmentScreen} />
-      <Drawer.Screen name={'bids'} component={inDevelopmentScreen} />
-      <Drawer.Screen name={'contracts'} component={inDevelopmentScreen} />
-      <Drawer.Screen name={'payments'} component={inDevelopmentScreen} />
+      <Drawer.Screen name={'bids'} component={MyBidsScreen} />
+      <Drawer.Screen name={'contracts'} component={MyContractsScreen} />
+      <Drawer.Screen name={'payments'} component={MyPaymentsScreen} />
       <Drawer.Screen name={'logout'} component={inDevelopmentScreen} />
       <Drawer.Screen name={'help'} component={inDevelopmentScreen} />
       <Drawer.Screen name={'feedback'} component={inDevelopmentScreen} />
@@ -123,6 +128,10 @@ const Navigation = () => {
             <RootStack.Screen
               name={Strings.APP_SCREEN_FORGOT_PASSWORD}
               component={ForgotPasswordScreen}
+            />
+            <RootStack.Screen
+              name={Strings.APP_SCREEN_VERIFY}
+              component={inDevelopmentScreen}
             />
           </>
         )}

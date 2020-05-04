@@ -14,6 +14,7 @@ export default function DefaultButton({label, type, ...ButtonProps}) {
 
   return (
     <Button
+      title={label}
       buttonStyle={theme}
       titleStyle={{color: type === 'solid' ? white : main, fontWeight: 'bold'}}
       type={type}

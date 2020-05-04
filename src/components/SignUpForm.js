@@ -69,7 +69,7 @@ export default function SignUpForm({navigationContext}) {
             if (response) {
               context.replaceScreen(
                 navigationContext,
-                context.utilities.strings.APP_SCREEN_VERIFY,
+                context.utilities.strings.APP_SCREEN_LOGIN,
               );
             } else {
               context.showToast(error);

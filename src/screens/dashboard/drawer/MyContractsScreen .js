@@ -4,7 +4,7 @@ import {ScrollView} from 'react-native';
 import MyCard from '../../../components/MyCard';
 import Header from '../../../components/Header';
 
-const BIDS = [
+const CONTRACTS = [
   {
     title: 'Safe boy needed',
     data: [
@@ -27,16 +27,16 @@ const BIDS = [
   },
 ];
 
-export default function MyBidScreen({navigation}) {
+export default function MyContactsScreen({navigation}) {
   const goBack = () => {
     navigation.goBack();
   };
 
   return (
     <>
-      <Header title="My bids" onBack={goBack} />
+      <Header title="My contacts" onBack={goBack} />
       <ScrollView style={{padding: 5}}>
-        <MyCard data={BIDS} buttonTitle="OPEN BID" />
+        <MyCard data={CONTRACTS} buttonTitle="OPEN CONTRACT" />
       </ScrollView>
     </>
   );
