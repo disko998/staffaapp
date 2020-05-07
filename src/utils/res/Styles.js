@@ -132,10 +132,7 @@ module.exports = StyleSheet.create({
     flexDirection: 'row',
   },
 
-  center: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  center: {width: '100%', justifyContent: 'center', alignItems: 'center'},
 
   ratingText: {
     color: Colors.white,
@@ -224,21 +221,29 @@ module.exports = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
-  /*
-   OLD styles UI Components
-  */
   root: {
     flex: 1,
     backgroundColor: Colors.appBGColor,
     overflow: 'hidden',
   },
+  ForgotPasswordText: {
+    fontSize: 15,
+    alignSelf: 'flex-start',
+    color: Colors.white,
+    marginVertical: marginBetweenElements,
+  },
+
+  ForgotPasswordLinkText: {
+    fontSize: 15,
+    color: Colors.white,
+  },
+
   headColor: {
     backgroundColor: Colors.black,
   },
 
   formTitle: {
-    color: Colors.black,
+    color: Colors.white,
     fontSize: 25,
     textAlign: 'center',
     fontWeight: 'bold',
@@ -248,14 +253,14 @@ module.exports = StyleSheet.create({
   splashLogoTextStyle: {
     fontSize: 30,
     fontFamily: Strings.FONT_QMA,
-    color: Colors.black,
+    color: Colors.white,
   },
 
   headerLogoTextStyle: {
     fontSize: 40,
     fontWeight: '600',
     fontFamily: Strings.FONT_QMA,
-    color: Colors.black,
+    color: Colors.white,
     marginVertical: marginBetweenElements,
     textAlign: 'center',
   },
@@ -264,7 +269,7 @@ module.exports = StyleSheet.create({
     fontSize: 18,
     marginTop: 15,
     fontStyle: 'normal',
-    color: Colors.black,
+    color: Colors.white,
     marginVertical: marginBetweenElements,
     textAlign: 'left',
   },
@@ -277,7 +282,7 @@ module.exports = StyleSheet.create({
   },
 
   inputLabel: {
-    color: Colors.mediumGray,
+    color: Colors.white,
     marginBottom: 10,
   },
 
@@ -289,6 +294,10 @@ module.exports = StyleSheet.create({
     padding: 0,
   },
 
+  checkboxlabel: {
+    color: Colors.white,
+  },
+
   inputWrapper: {
     display: 'flex',
     flexDirection: 'column',
@@ -298,14 +307,38 @@ module.exports = StyleSheet.create({
   },
 
   InputTextBoxStyle: {
-    borderColor: Colors.mediumGray,
-    borderRadius: 2,
+    borderColor: Colors.white,
+    borderRadius: 5,
     borderWidth: 0.5,
     height: 50,
     width: '100%',
-    backgroundColor: Colors.lightGray,
+    backgroundColor: Colors.white,
     padding: 5,
   },
+  defaultButton: {
+    backgroundColor: Colors.main,
+    height: 50,
+    marginVertical: marginBetweenElements,
+  },
+
+  typeButton: {
+    height: 50,
+    marginVertical: marginBetweenElements,
+    borderColor: Colors.white,
+    borderWidth: 1.5,
+  },
+
+  logoStyle: {
+    height: 100,
+    width: 100,
+    overflow: 'hidden',
+  },
+
+  // *****************
+  /*
+   OLD styles UI Components
+  */
+  // *****************
 
   InputTextDisableStyle: {
     flex: 1,
@@ -327,31 +360,6 @@ module.exports = StyleSheet.create({
     fontSize: 15,
     color: Colors.black,
     marginRight: 10,
-  },
-
-  defaultButton: {
-    backgroundColor: Colors.main,
-    height: 50,
-    marginVertical: marginBetweenElements,
-  },
-
-  typeButton: {
-    height: 50,
-    marginVertical: marginBetweenElements,
-    borderColor: Colors.main,
-    borderWidth: 1.5,
-  },
-
-  ForgotPasswordText: {
-    fontSize: 15,
-    alignSelf: 'flex-start',
-    color: Colors.black,
-    marginVertical: marginBetweenElements,
-  },
-
-  ForgotPasswordLinkText: {
-    fontSize: 15,
-    color: Colors.link,
   },
 
   NewToAppTextStyle: {

@@ -4,9 +4,9 @@
 
 const Colors = {
   headerBGColor: 'orange',
-  appBGColor: '#fff',
+  appBGColor: '#3090e4',
   appColor: 'black',
-  main: '#2b4059',
+  main: '#17b2ed',
   link: '#9c8aed',
   secondary: '#e31262',
   inactive: '#6facd1',

@@ -20,8 +20,9 @@ export default function SignInForm({navigationContext}) {
     ForgotPasswordLinkText,
     ForgotPasswordText,
     formTitle,
+    checkboxlabel,
   } = context.utilities.styles;
-  const {black} = context.utilities.colors;
+  const {black, white} = context.utilities.colors;
 
   const isInputValid = () => {
     if (credentials.username === '') {
@@ -120,7 +121,10 @@ export default function SignInForm({navigationContext}) {
       <CheckBox
         containerStyle={context.utilities.styles.checkbox}
         title="Remember this device"
+        textStyle={checkboxlabel}
         checked={credentials.rememberMe}
+        uncheckedColor={white}
+        checkedColor={white}
         onPress={() => {
           setCredentials({...credentials, rememberMe: !credentials.rememberMe});
         }}
@@ -136,7 +140,7 @@ export default function SignInForm({navigationContext}) {
         </Text>
       </Text>
 
-      <Text style={{textAlign: 'center', color: black}}>Or</Text>
+      <Text style={{textAlign: 'center', color: white}}>Or</Text>
 
       <DefaultButton
         onPress={onRegisterClick}

@@ -13,9 +13,9 @@ export default class App extends Component {
       <AppProvider>
         <StatusBar
           barStyle="light-content"
-          backgroundColor={Colors.secondary}
+          backgroundColor={Colors.appBGColor}
         />
-        <SafeAreaView style={{flex: 0, backgroundColor: Colors.secondary}} />
+        <SafeAreaView style={{flex: 0, backgroundColor: Colors.appBGColor}} />
         <SafeAreaView style={{flex: 1, backgroundColor: Colors.main}}>
           <Navigation />
         </SafeAreaView>

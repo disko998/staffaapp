@@ -108,7 +108,7 @@ const Navigation = () => {
         initialRouteName={Strings.APP_SCREEN_HOME}
         headerMode="none"
         screenOptions={{headerShown: false}}>
-        {true ? (
+        {false ? (
           <>
             <RootStack.Screen
               name={Strings.APP_SCREEN_HOME}
