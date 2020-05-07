@@ -16,7 +16,7 @@ export default class SignUpScreen extends Component {
             <StatusBarPaddingIOS />
             <View style={context.utilities.styles.baseStyle1}>
               <KeyboardAwareScrollView showsVerticalScrollIndicator={false}>
-                <StaffDescription desc="Hello friends we are glad to add you in Staff family. Create your account and find jobs many more things by just registering your details." />
+                <StaffDescription />
                 <SignUpForm navigationContext={this} />
               </KeyboardAwareScrollView>
             </View>

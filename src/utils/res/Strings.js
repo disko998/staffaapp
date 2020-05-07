@@ -40,7 +40,7 @@ const Strings = {
 
   DISPLAY_TIME_FORMAT_1: 'DD-MMM-YYYY hh:mm a',
 
-  FONT_QMA: 'QUEEN OF THE MODERN AGE',
+  FONT_QMA: 'Queen Of The Modern Age',
   APP_SCREEN_HOME: 'HomeScreen',
   APP_SCREEN_SPLASH: 'SplashScreen',
   APP_SCREEN_LOGIN: 'LoginScreen',

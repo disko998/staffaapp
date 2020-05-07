@@ -276,8 +276,6 @@ module.exports = StyleSheet.create({
 
   baseStyle1: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     padding: 15,
   },
 
