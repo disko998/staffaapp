@@ -3,7 +3,7 @@ import {ScrollView, StatusBar} from 'react-native';
 
 import Message from '../../components/Message';
 import Header from '../../components/Header';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Colors from '../../utils/res/Colors';
 
 const MESSAGES = [
   {
@@ -26,8 +26,8 @@ const MESSAGES = [
 
 export default function MessagesScreen() {
   return (
-    <ScrollView>
-      <StatusBar backgroundColor={Colors.main} />
+    <ScrollView style={{backgroundColor: Colors.appBGColor}}>
+      <StatusBar backgroundColor={Colors.appBGColor} />
       <Header title="Messages" />
       {MESSAGES.map((message, index) => {
         return <Message message={message} key={message.title + index} />;

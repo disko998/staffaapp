@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {View, Text, Button} from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
@@ -23,6 +23,7 @@ import DrawerProfile from './screens/profile/DrawerProfile';
 import MyBidsScreen from './screens/dashboard/drawer/MyBidsScreen';
 import MyContractsScreen from './screens/dashboard/drawer/MyContractsScreen ';
 import MyPaymentsScreen from './screens/dashboard/drawer/MyPaymentsScreen';
+import {AppContext} from './context/AppProvider';
 
 function inDevelopmentScreen({route, navigation}) {
   return (
@@ -63,9 +64,9 @@ function TabNavigation() {
       })}
       tabBarOptions={{
         activeTintColor: Colors.white,
-        inactiveTintColor: Colors.inactive,
-        inactiveBackgroundColor: Colors.main,
-        activeBackgroundColor: Colors.main,
+        inactiveTintColor: Colors.main,
+        inactiveBackgroundColor: Colors.appBGColor,
+        activeBackgroundColor: Colors.appBGColor,
       }}>
       <Tab.Screen
         name={Strings.APP_SCREEN_SEARCH_JOBS}
@@ -102,13 +103,17 @@ const DrawerNavigation = () => {
 };
 
 const Navigation = () => {
+  const context = useContext(AppContext);
+
+  console.log(context.currentUser);
+
   return (
     <NavigationContainer>
       <RootStack.Navigator
         initialRouteName={Strings.APP_SCREEN_HOME}
         headerMode="none"
         screenOptions={{headerShown: false}}>
-        {false ? (
+        {!context.currentUser ? (
           <>
             <RootStack.Screen
               name={Strings.APP_SCREEN_HOME}

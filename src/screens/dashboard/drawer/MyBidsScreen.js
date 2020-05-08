@@ -3,6 +3,7 @@ import {ScrollView} from 'react-native';
 
 import MyCard from '../../../components/MyCard';
 import Header from '../../../components/Header';
+import Colors from '../../../utils/res/Colors';
 
 const BIDS = [
   {
@@ -35,7 +36,7 @@ export default function MyBidScreen({navigation}) {
   return (
     <>
       <Header title="My bids" onBack={goBack} />
-      <ScrollView style={{padding: 5}}>
+      <ScrollView style={{padding: 5, backgroundColor: Colors.appBGColor}}>
         <MyCard data={BIDS} buttonTitle="OPEN BID" />
       </ScrollView>
     </>

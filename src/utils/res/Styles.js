@@ -16,12 +16,18 @@ module.exports = StyleSheet.create({
     color: Colors.black,
     fontWeight: 'bold',
   },
+  whiteTitle: {
+    fontSize: 20,
+    color: Colors.white,
+    fontWeight: 'bold',
+  },
   grayText: {
     fontSize: 17,
+    color: Colors.lightGray,
   },
   mainText: {
     fontSize: 18,
-    color: Colors.main,
+    color: Colors.white,
   },
   rowSpace: {
     flexDirection: 'row',
@@ -47,39 +53,47 @@ module.exports = StyleSheet.create({
   },
   messageTitle: {
     fontSize: 18,
-    color: Colors.main,
+    color: Colors.white,
     alignSelf: 'flex-start',
     fontWeight: 'bold',
   },
   messageContent: {
-    color: Colors.inactive,
+    color: Colors.white,
   },
   messageDate: {
     position: 'absolute',
     top: 0,
     right: 0,
-    color: Colors.inactive,
+    color: Colors.white,
   },
 
   notificationLink: {
-    color: Colors.inactive,
+    color: Colors.white,
     textDecorationLine: 'underline',
     marginLeft: 10,
     fontSize: 18,
   },
   notificationTitle: {
     fontSize: 18,
-    color: Colors.main,
+    color: Colors.white,
     textAlign: 'left',
-    alignSelf: 'flex-start',
     flex: 1,
-    fontWeight: 'bold',
     overflow: 'hidden',
     height: 30,
+    marginLeft: 10,
+  },
+  notificationStyle: {
+    width: '100%',
+    padding: 5,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    maxHeight: 100,
+    overflow: 'hidden',
   },
 
   profileBanner: {
-    backgroundColor: Colors.secondary,
+    backgroundColor: Colors.main,
     width: '100%',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -119,7 +133,15 @@ module.exports = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 15,
-    backgroundColor: Colors.main,
+    backgroundColor: Colors.appBGColor,
+    elevation: 5,
+    shadowColor: Colors.black,
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   },
   headerTitle: {
     textAlign: 'center',
@@ -140,7 +162,7 @@ module.exports = StyleSheet.create({
   },
 
   label: {
-    color: Colors.inactive,
+    color: Colors.white,
     fontSize: 18,
     marginRight: 15,
   },
@@ -150,23 +172,25 @@ module.exports = StyleSheet.create({
   },
   itemText: {
     fontSize: 18,
-    color: Colors.main,
+    color: Colors.white,
     flex: 1,
   },
+
+  card: {backgroundColor: Colors.main, borderWidth: 0, borderRadius: 10},
 
   vm: {
     marginVertical: marginBetweenElements,
   },
 
   settingsLink: {
-    color: Colors.inactive,
+    color: Colors.white,
     fontSize: 18,
     flex: 1,
     marginLeft: 10,
   },
 
   searchJobsInputWrapper: {
-    backgroundColor: Colors.transparentMain(0.7),
+    backgroundColor: Colors.transparentSecondary(0.7),
     padding: 5,
     paddingHorizontal: 20,
     position: 'absolute',
@@ -214,7 +238,7 @@ module.exports = StyleSheet.create({
   },
 
   mainButton: {
-    backgroundColor: Colors.main,
+    backgroundColor: Colors.appBGColor,
     color: Colors.white,
     fontWeight: 'bold',
     height: 50,
@@ -314,7 +338,7 @@ module.exports = StyleSheet.create({
     padding: 5,
   },
   defaultButton: {
-    backgroundColor: Colors.main,
+    backgroundColor: Colors.appBGColor,
     height: 50,
     marginVertical: marginBetweenElements,
   },
@@ -330,6 +354,12 @@ module.exports = StyleSheet.create({
     height: 100,
     width: 100,
     overflow: 'hidden',
+  },
+
+  notificationWrapper: {
+    padding: 10,
+    borderWidth: 0,
+    backgroundColor: Colors.appBGColor,
   },
 
   // *****************

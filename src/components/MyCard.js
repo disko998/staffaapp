@@ -7,12 +7,18 @@ import {AppContext} from '../context/AppProvider';
 
 export default function MyCard({data, buttonTitle}) {
   const context = useContext(AppContext);
-  const {rowSpace, darkTitle, grayText, mainText} = context.utilities.styles;
+  const {
+    rowSpace,
+    whiteTitle,
+    grayText,
+    mainText,
+    card,
+  } = context.utilities.styles;
 
-  return data.map(card => (
-    <Card style={{padding: 15}}>
-      <Text style={darkTitle}>{card.title}</Text>
-      {card.data.map(option => {
+  return data.map(item => (
+    <Card containerStyle={card}>
+      <Text style={whiteTitle}>{item.title}</Text>
+      {item.data.map(option => {
         const key = Object.keys(option)[0];
         return (
           <View style={rowSpace}>

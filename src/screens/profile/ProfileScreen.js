@@ -11,21 +11,19 @@ import SettingsList from '../../components/SettingsList';
 const profileSettings = [
   {
     label: 'Training',
-    icon: <Feather name="briefcase" color={Colors.inactive} size={20} />,
+    icon: <Feather name="briefcase" color={Colors.white} size={20} />,
   },
   {
     label: 'Settings',
-    icon: <Feather name="settings" color={Colors.inactive} size={20} />,
+    icon: <Feather name="settings" color={Colors.white} size={20} />,
   },
   {
     label: 'Finance',
-    icon: (
-      <MaterialIcons name="attach-money" color={Colors.inactive} size={20} />
-    ),
+    icon: <MaterialIcons name="attach-money" color={Colors.white} size={20} />,
   },
   {
     label: 'Offers',
-    icon: <Feather name="gift" color={Colors.inactive} size={20} />,
+    icon: <Feather name="gift" color={Colors.white} size={20} />,
   },
 ];
 
@@ -33,7 +31,7 @@ export default function ProfileScreen() {
   const [status, setStatus] = React.useState(true);
 
   return (
-    <ScrollView>
+    <ScrollView style={{backgroundColor: Colors.appBGColor}}>
       <ProfileBanner
         name="Julie Smith"
         title="Nurse at RGN Dip LL."

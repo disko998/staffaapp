@@ -4,6 +4,7 @@ import {Card, Divider, Button} from 'react-native-elements';
 
 import Map from './Map';
 import {AppContext} from '../context/AppProvider';
+import Colors from '../utils/res/Colors';
 
 export default function ProfileOverview({
   staffNumber,
@@ -16,7 +17,7 @@ export default function ProfileOverview({
   const {row, center, label, itemText, vm} = context.utilities.styles;
 
   return (
-    <Card>
+    <Card containerStyle={{backgroundColor: Colors.main, borderWidth: 0}}>
       <View style={[row, center]}>
         <Text style={label}>Staff number : </Text>
         <Text style={itemText}>{staffNumber}</Text>
@@ -27,11 +28,11 @@ export default function ProfileOverview({
         <Text style={itemText}>{status ? 'Active' : 'Inactive'}</Text>
         <Switch
           trackColor={{
-            false: context.utilities.colors.lightGrayDark,
-            true: context.utilities.colors.main,
+            false: context.utilities.colors.white,
+            true: context.utilities.colors.white,
           }}
-          thumbColor={context.utilities.colors.white}
-          ios_backgroundColor={context.utilities.styles.main}
+          thumbColor={context.utilities.colors.main}
+          ios_backgroundColor={context.utilities.styles.white}
           onValueChange={onStatusChange}
           value={status}
         />
@@ -43,7 +44,7 @@ export default function ProfileOverview({
         <Button
           title="Edit"
           type="clear"
-          titleStyle={{color: context.utilities.colors.inactive}}
+          titleStyle={{color: context.utilities.colors.white}}
           onPress={onLocationChange}
         />
       </View>

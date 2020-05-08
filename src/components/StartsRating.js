@@ -18,7 +18,7 @@ export default function StarsRating({...props}) {
         ratingBackgroundColor={context.utilities.colors.lightGrayDark}
         ratingCount={5}
         fractions={2}
-        tintColor={context.utilities.colors.secondary}
+        tintColor={context.utilities.colors.main}
         {...props}
       />
       <Text style={ratingText}>91/100</Text>

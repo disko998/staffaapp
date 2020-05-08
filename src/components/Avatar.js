@@ -3,15 +3,18 @@ import {View, Image} from 'react-native';
 
 import {AppContext} from '../context/AppProvider';
 
-export default function Avatar({src, size}) {
+export default function Avatar({src, size, portrait}) {
   const context = useContext(AppContext);
-  const {avatarStyle, avatarWrapper} = context.utilities.styles;
+  const {
+    avatarStyle,
+    avatarWrapper,
+    avatarMessageStyle,
+  } = context.utilities.styles;
+
+  const style = portrait ? avatarMessageStyle : avatarStyle;
   return (
     <View style={avatarWrapper}>
-      <Image
-        style={[avatarStyle, {width: size, height: size}]}
-        source={{uri: src}}
-      />
+      <Image style={[style, {width: size, height: size}]} source={{uri: src}} />
     </View>
   );
 }
