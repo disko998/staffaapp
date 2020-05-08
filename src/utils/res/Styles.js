@@ -258,8 +258,9 @@ module.exports = StyleSheet.create({
   },
 
   ForgotPasswordLinkText: {
-    fontSize: 15,
+    fontSize: 18,
     color: Colors.white,
+    fontWeight: 'bold',
   },
 
   headColor: {
@@ -334,8 +335,9 @@ module.exports = StyleSheet.create({
     borderWidth: 0.5,
     height: 50,
     width: '100%',
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.appBGColor,
     padding: 5,
+    color: Colors.white,
   },
   defaultButton: {
     backgroundColor: Colors.appBGColor,

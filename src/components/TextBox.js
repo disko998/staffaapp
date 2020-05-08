@@ -10,13 +10,13 @@ export default function TextBox({label, ...InputProps}) {
     inputLabel,
     inputWrapper,
   } = context.utilities.styles;
-  const {gray} = context.utilities.colors;
+  const {white} = context.utilities.colors;
 
   return (
     <View style={inputWrapper}>
       <Text style={inputLabel}>{label}</Text>
       <TextInput
-        placeholderTextColor={gray}
+        placeholderTextColor={white}
         underlineColorAndroid="transparent"
         {...InputProps}
         style={[InputTextBoxStyle, InputProps.style]}

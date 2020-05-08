@@ -113,7 +113,7 @@ const Navigation = () => {
         initialRouteName={Strings.APP_SCREEN_HOME}
         headerMode="none"
         screenOptions={{headerShown: false}}>
-        {!context.currentUser ? (
+        {context.currentUser ? (
           <>
             <RootStack.Screen
               name={Strings.APP_SCREEN_HOME}

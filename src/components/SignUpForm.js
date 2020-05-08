@@ -144,7 +144,11 @@ export default function SignUpForm({navigationContext}) {
         onSubmitEditing={onRegister}
       />
 
-      <DefaultButton onPress={onRegister} title="GET STARTED" />
+      <DefaultButton
+        onPress={onRegister}
+        title="GET STARTED"
+        color={context.utilities.colors.main}
+      />
 
       <Text style={ForgotPasswordText}>
         Don't you have Staff account?

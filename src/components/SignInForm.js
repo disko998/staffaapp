@@ -22,7 +22,7 @@ export default function SignInForm({navigationContext}) {
     formTitle,
     checkboxlabel,
   } = context.utilities.styles;
-  const {black, white} = context.utilities.colors;
+  const {main, white} = context.utilities.colors;
 
   const isInputValid = () => {
     if (credentials.username === '') {
@@ -130,7 +130,7 @@ export default function SignInForm({navigationContext}) {
         }}
       />
 
-      <DefaultButton onPress={onLoginClick} title="SIGN IN" />
+      <DefaultButton onPress={onLoginClick} title="SIGN IN" color={main} />
 
       <Text style={ForgotPasswordText}>
         Forgot your password?
